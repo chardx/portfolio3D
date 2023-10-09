@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 const ClientProvider = ({ children }) => {
   return (
     <>
-      <Toaster />
+      <Toaster position="bottom-center" />
 
       {children}
     </>
