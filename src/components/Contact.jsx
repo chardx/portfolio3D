@@ -7,11 +7,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import toast from "react-hot-toast";
 
-//template_63h24z7
-//service_jnljgxi
-
-//mXcbGo9qIfWfertbL --public
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -19,6 +16,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const notify = () =>
+    toast("Thank you. I will get back to you as soon as possible.");
 
   const [loading, setLoading] = useState(false);
 
@@ -52,8 +52,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          // alert("Thank you. I will get back to you as soon as possible.");
+          notify();
           setForm({
             name: "",
             email: "",
