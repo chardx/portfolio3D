@@ -23,10 +23,6 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import quantrics from "./company/quantrics.jpg";
 import sitel from "./company/sitel.png";
 
@@ -34,9 +30,6 @@ import chadgpt from './chadgpt.png'
 import tshirt from './tshirt.png'
 import webscraper from './webscraper.png'
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -61,15 +54,10 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+
   quantrics, sitel,
-  carrent,
   chadgpt,
   tshirt,
-  webscraper,
-  jobit,
-  tripguide,
+  webscraper
+
 };

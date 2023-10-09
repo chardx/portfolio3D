@@ -14,17 +14,11 @@ import {
     mongodb,
     git,
     figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
+
     chadgpt,
     tshirt,
     webscraper,
-    jobit,
-    tripguide,
+
     threejs,
     sitel,
     quantrics
