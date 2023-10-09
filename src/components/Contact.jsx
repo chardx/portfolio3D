@@ -50,11 +50,21 @@ const Contact = () => {
         );
     });
 
-    toast.promise(sendEmailPromise, {
-      loading: "Sending...",
-      success: <b>Thank you. I will get back to you as soon as possible.</b>,
-      error: <b>Sending failed!</b>,
-    });
+    toast.promise(
+      sendEmailPromise,
+      {
+        loading: "Sending...",
+        success: <b>Thank you. I will get back to you as soon as possible.</b>,
+        error: <b>Sending failed!</b>,
+      },
+      {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      }
+    );
   };
 
   const [loading, setLoading] = useState(false);
@@ -69,8 +79,41 @@ const Contact = () => {
     });
   };
 
+  const validate = () => {
+    const { name, email, message } = form;
+
+    if (!name) {
+      toast.error(
+        "Hey there! Our contact form is feeling a bit lonely without your name. Can you help us out? 😄 ",
+        {
+          icon: "🤔",
+        }
+      );
+      return false;
+    }
+
+    if (!email) {
+      toast.error(
+        "Hey there! You're almost there, but the email field needs a little love from you. 🙈",
+        { icon: "😬" }
+      );
+      return false;
+    }
+
+    if (!message) {
+      toast.error(
+        "Hey there! We're eager to hear from you. Just one small thing—the message field is eagerly waiting for your input. 🙈",
+        { icon: "🙏" }
+      );
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validate()) return false;
     setLoading(true);
 
     notify();
