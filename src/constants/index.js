@@ -42,6 +42,11 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
+    {
+        id: "resume",
+        title: "Resume",
+        link: "https://richardroxas.tiiny.site/"
+    }
 ];
 
 const services = [
